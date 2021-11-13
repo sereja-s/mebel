@@ -1,0 +1,90 @@
+.new-collection {
+	text-align: center;
+	padding: 45px 0 105px;
+}
+// Стили блока опианы глобально
+/* .container-fluid {
+} */
+.new-collection__title {
+	color: $title-black;
+	font-size: 36px;
+	line-height: 51px;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	// рисуем полосочку:
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 250px;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background: #6d7278;
+	}
+}
+.new-collection__text {
+	max-width: 730px;
+	margin: 0 auto 30px;
+}
+.collection {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 30px;
+}
+.collection__item {
+	position: relative;
+
+	&:hover {
+		.collection__info {
+			opacity: 1; /* при наведении блок с информацией проявляется */
+		}
+	}
+}
+.collection__images {
+	min-height: 350px;
+	object-fit: cover;
+}
+// поднимем информацию на картинку:
+.collection__info {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(#fff, 0.5);
+	padding: 10px; /* отступы (поля) безопасности */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0; /* блок с информацией не будет показан */
+	transition: all 0.5s ease;
+}
+.collection__info-title {
+	font-size: 20px;
+	line-height: 25px;
+	color: $title-black;
+	padding-bottom: 19px;
+	margin-bottom: 19px;
+	// рисуем полосочку:
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 80%;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background: #6d7278;
+	}
+}
+.collection__info-text {
+	font-weight: 600;
+	font-size: 14px;
+	color: #707070;
+}
