@@ -1,0 +1,100 @@
+/* .header {
+} */
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 120px;
+}
+.menu {
+	padding-left: 35px;
+	padding-right: 60px;
+}
+.menu__list {
+	display: flex;
+}
+// Обратимся ко вторым пунктам каждого меню:
+.menu__list-item + .menu__list-item {
+	padding-left: 80px;
+}
+.menu__list-link {
+	@extend %title-font;
+	color: rgba(54, 56, 56, 0.9033);
+	line-height: 22px;
+}
+.logo {
+	margin: 0 auto; /* логотип раздвинет пункты меню */
+}
+.header__btn {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+// Меню, появляющееся при нажатии на символ-меню:
+.rightside-menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	max-width: 694px;
+	background-color: #fff;
+	padding-top: 40px;
+	box-shadow: -2px 3px 17px 0px rgba(0, 0, 0, 0.7);
+	transition: all 0.7s ease;
+	z-index: 2;
+	// пропишем условие ухода меню в сторону при нажатии на иконку(крестик):
+	/* когда к классу меню добавлен технический класс */
+	&.rightside-menu--close {
+		transform: translateX(150%);
+	}
+}
+.rightside-menu__close {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	margin-left: 50px;
+	margin-bottom: 60px;
+}
+.rightside-menu__content {
+	text-align: center;
+	max-width: 485px;
+	margin: 0 auto; /* отцентрировали */
+}
+.rightside-menu__logo {
+	display: inline-block; /* чтобы начали действовать блочные свойства (отступы идр.) */
+	margin-bottom: 40px;
+}
+.rightside-menu__title {
+	color: $title-black;
+	@extend %title-font;
+	font-size: 36px;
+	line-height: 51px;
+	// пропишем полосочку под заголовком:
+	position: relative;
+	margin-bottom: 17px;
+	padding-bottom: 17px;
+
+	&::after {
+		content: "";
+		position: absolute;
+		// выставляем полосочку по центру:
+		bottom: 0;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		/* укажем размеры полосочки: */
+		max-width: 252px;
+		height: 1px;
+		background: #6d7278;
+	}
+}
+.rightside-menu__text {
+	margin-bottom: 75px;
+}
+.rightside-menu__images {
+	max-width: 485px;
+}

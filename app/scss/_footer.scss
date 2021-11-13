@@ -1,0 +1,142 @@
+/* .footer {
+} */
+.footer__content {
+	background: #dfdfdf;
+	padding: 60px 0 80px;
+}
+.footer__inner {
+	display: flex;
+	justify-content: space-between;
+}
+.footer__info {
+	width: 540px;
+}
+.footer__info-title {
+	color: $title-black;
+	@extend %title-font;
+	margin-bottom: 14px;
+	line-height: 23px;
+}
+.footer__info-text {
+	margin-bottom: 16px;
+	max-width: 475px;
+}
+.footer__info-email {
+	font-weight: 600;
+	font-size: 14px;
+	color: $title-black;
+	display: inline-block; /* чтобы сработал отступ для ссылки (строчного элемента) */
+	margin-bottom: 22px;
+	padding-left: 30px;
+	// Распололжим иконку(конверт) впереди:
+	position: relative;
+	&::before {
+		content: "";
+		background-image: url(../images/icons-svg/email.svg);
+		position: absolute;
+		left: 0;
+		width: 16px;
+		height: 12px;
+		top: 8px;
+	}
+}
+.footer__form {
+	display: flex;
+}
+.footer__form-input {
+	padding: 6px 10px 6px 18px;
+	border-radius: 21px;
+	background-color: transparent;
+	border: 1px solid rgba($title-black, 0.7);
+	width: 100%;
+	&::placeholder {
+		font-family: "Open Sans", sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 27px;
+		color: #a1a1a1;
+	}
+}
+.footer__form-button {
+	background-color: $title-black;
+	border: none;
+	color: #fffff0;
+	border-radius: 21px;
+	font-weight: 600;
+	padding: 6px 12px;
+	min-width: 160px;
+	margin-left: 9px;
+	cursor: pointer;
+}
+// Блок с соц.сетями:
+.footer__social {
+	width: 125px;
+	margin-right: auto;
+	margin-left: 100px;
+}
+/* .footer__social-item {
+} */
+.footer__social-item,
+.footer__menu-item {
+	margin-bottom: 15px;
+	font-weight: 600;
+	font-size: 14px;
+}
+.footer__social-link {
+	padding-left: 28px; /* задали отступ для изображения(иконки) */
+	// Распололжим иконки(соц.сети) впереди:
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		// стили общие для всех иконок(соц.сети)
+		left: 0;
+		width: 16px;
+		height: 16px;
+		top: 3px;
+	}
+}
+.footer__social-link--facebook::before {
+	background-image: url(../images/icons-svg/facebook.svg);
+}
+.footer__social-link--instagram::before {
+	background-image: url(../images/icons-svg/instagram.svg);
+	width: 14px;
+	height: 14px;
+	top: 4px;
+}
+.footer__social-link--pinterest::before {
+	background-image: url(../images/icons-svg/pinterest.svg);
+}
+.footer__social-link--whatsapp::before {
+	background-image: url(../images/icons-svg/whatsapp.svg);
+	width: 14px;
+	height: 14px;
+}
+.footer__social-link--youtube::before {
+	background-image: url(../images/icons-svg/youtube.svg);
+	width: 18px;
+	height: 12px;
+	top: 4px;
+}
+.footer__social-link,
+.footer__menu-link {
+	color: #707070;
+}
+// Блок с меню (3-я колонка):
+.footer__menu {
+	margin-right: 60px;
+	width: 125px;
+}
+/* .footer__menu-list {
+} */
+/* .footer__menu-item {
+} */
+/* .footer__menu-link {
+} */
+.footer__copyright {
+	background-color: $title-black;
+	color: #a1a1a1;
+	text-align: center;
+	padding: 42px 0 41px;
+}
