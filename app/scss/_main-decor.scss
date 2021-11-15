@@ -1,0 +1,33 @@
+.decor {
+	/* padding: 170px 0 155px; */
+	padding: 300px 0 10px 500px;
+	background-image: url(../images/decor-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.decor__title {
+	max-width: 730px;
+	/* color: $title-black; */
+	color: #000;
+	font-size: 60px;
+	line-height: 80px;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	@extend %title-font;
+	// рисуем полосочку:
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 200px;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		background: #2e3031;
+	}
+}
+.decor__text {
+	max-width: 540px;
+	color: #0b0c0c;
+}

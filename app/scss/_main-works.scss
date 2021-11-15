@@ -1,0 +1,84 @@
+.works-path {
+	padding: 80px 0 30px;
+}
+
+.works-path__title {
+	@extend %title-font;
+	color: $title-black;
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 36px;
+	line-height: 51px;
+}
+/* .works-path__items {
+} */
+.works-path__items-box {
+	display: flex;
+	align-items: flex-end;
+	// нарисовали линию внизу 2-х колонок:
+	border-bottom: 2px solid rgba($title-black, 0.7);
+	// рисуем кружояек в начале линии:
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: $title-black;
+	}
+}
+.works-path__item {
+	width: 250px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 100%;
+	position: relative;
+}
+.works-path__item--production {
+	margin-left: 317px;
+	// рисуем маленькую(вертикальную) полосочку выше линии:
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 20px;
+		width: 2px;
+		background: rgba($title-black, 0.7);
+		// + для родителя .works-path__item указать- position: relative;
+	}
+}
+.works-path__item--production,
+.works-path__item--consultation {
+	padding-bottom: 38px;
+}
+.works-path__item--measurements {
+	padding-top: 38px;
+	margin-left: 305px;
+	// рисуем маленькую(вертикальную) полосочку ниже линии:
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 20px;
+		width: 2px;
+		background: rgba($title-black, 0.7);
+		// + для родителя .works-path__item указать- position: relative;
+	}
+}
+
+/* .works-path__item-img {
+} */
+.works-path__item-title {
+	margin-left: 13px;
+	@extend %title-font;
+	color: $title-black;
+}
+.works-path__item-text {
+	margin-top: 13px;
+}

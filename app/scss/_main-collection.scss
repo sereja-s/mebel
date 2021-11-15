@@ -11,6 +11,7 @@
 	line-height: 51px;
 	padding-bottom: 25px;
 	margin-bottom: 25px;
+	@extend %title-font;
 	// рисуем полосочку:
 	position: relative;
 	&::after {
