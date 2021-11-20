@@ -75,8 +75,10 @@ body {
 // Хлебные крошки:
 
 .breadcrumbs {
-	background: rgba(#dfdfdf, 0.5);
+	background: rgba(#dfdfdf, 0.85);
 	padding: 13px 14px;
+	position: relative;
+	z-index: 10;
 }
 
 .breadcrumbs__list {

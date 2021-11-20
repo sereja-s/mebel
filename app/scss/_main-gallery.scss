@@ -41,3 +41,16 @@
 	width: 100%;
 	height: 100%;
 }
+
+.gallery.gallery__page {
+	.gallery__item img {
+		max-height: 1165px;
+	}
+}
+
+.gallery.gallery__page {
+	.gallery__item:nth-child(8) {
+		grid-column: span 2; /* обратились к 8-му элементу и указали, что он займёт 2-е колонки */
+		grid-row: span 2; /* обратились к 8-му элементу и указали, что он займёт 2-а ряда */
+	}
+}

@@ -21,6 +21,7 @@
     "mixitup": "^3.3.1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^4.0.9",
     "slick-carousel": "^1.8.1"
   }
 }
