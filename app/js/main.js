@@ -11,6 +11,21 @@ $(function () {
 		$('.rightside-menu').addClass('rightside-menu--close');
 	});
 
+
+
+
+
+	// Подключаем меню-бургер: 
+
+	/* находим класс кнопки( 3-и полосочки), при клике на которую вызывается функция, которая обращается к соответствующему классу меню-бургер и добавляет ему технический класс menu--open */
+	$('.header__btn-menu').on('click', function () {
+		$('.menu').toggleClass('menu--open');
+	});
+
+
+
+
+
 	// Активируем слайдер:
 
 	$('.top__slider').slick({
@@ -31,6 +46,10 @@ $(function () {
 		prevArrow: '<button type="button" class="article-slider__arrow article-slider__arrowleft"><img src="images/icons-svg/arrow-slide-left.svg" alt="arrow-slide-left"></button>',
 		nextArrow: '<button type="button" class="article-slider__arrow article-slider__arrowright"><img src="images/icons-svg/arrow-slide-right.svg" alt="arrow-slide-right"></button>',
 	});
+
+
+
+
 
 	// Запустим миксер для галереи: 
 

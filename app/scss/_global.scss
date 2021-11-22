@@ -12,7 +12,7 @@ body {
 	font-weight: 400;
 	color: $default-text;
 	overflow-x: hidden; /* убрали горизонтальную прокрутку */
-	min-width: 320px;
+	min-width: 300px;
 }
 
 .wrapper {
@@ -83,11 +83,15 @@ body {
 
 .breadcrumbs__list {
 	display: flex;
+	overflow-x: auto;
+}
+.breadcrumbs__item {
+	position: relative;
+	padding-right: 8px;
 }
 .breadcrumbs__item::after {
+	position: absolute;
 	content: "/";
-	margin-left: -4px;
-	margin-right: 4px;
 }
 .breadcrumbs__item:last-child::after {
 	display: none; /* убрали косую черту у последнего элемента меню хлебных крошек */
