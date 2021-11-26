@@ -26,8 +26,8 @@
 		background: #6d7278;
 	}
 }
-.contact__social {
-	padding-left: 284px !important;
+.contact .contact__social {
+	padding-left: 284px;
 	display: flex;
 	margin-bottom: 20px;
 }
@@ -127,7 +127,7 @@
 		top: 0;
 		bottom: 0;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		background-color: rgba(#fff, 0.5);
 		color: $title-black;
